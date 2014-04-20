@@ -10,16 +10,14 @@
 
 #define NUM_THREADS 5
 
-void *taskCode(void *args) 
-{
+void *taskCode(void *args) {
 	int tid;
 	tid = *((int *) args);
 	printf("Hello World! Its me, thread %d\n", tid);
 	return NULL;
 }
 
-int main(void) 
-{
+int main(void) {
 	pthread_t threads[NUM_THREADS];
 	int threadArgs[NUM_THREADS];
 	int rc,i;
